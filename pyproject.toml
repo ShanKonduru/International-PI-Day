@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "international-pi-day"
+version = "0.1.0"
+description = "This program plots PI symbol using Cartography libraries"
+authors = ["Shan Konduru <shankonduru@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+matplotlib = "^3.8.3"
+Cartopy = "^0.22.0"
+geopy = "^2.4.1"
+geopandas = "^0.14.3"
+folium = "^0.16.0"
+
+[tool.poetry.group.dev.dependencies]
+geopy = "^2.4.1"
+Cartopy = "^0.22.0"
+matplotlib = "^3.8.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
