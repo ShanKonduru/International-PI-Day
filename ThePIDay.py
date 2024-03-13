@@ -1,4 +1,5 @@
 import folium
+import random
 
 # Lookup table for latitude and longitude coordinates of ZIP codes
 zip_code_coordinates = {
@@ -17,16 +18,22 @@ zip_code_coordinates = {
     '20001': (38.9041, -77.0172)
 }
 
+# Function to generate a random color
+def random_color():
+    colors = ['darkpurple', 'purple', 'red', 'white', 'darkgreen', 'orange', 'cadetblue', 'lightblue', 'darkred', 'beige', 'green', 'black', 'lightred', 'lightgray', 'darkblue', 'blue', 'gray', 'pink', 'lightgreen']
+    return random.choice(colors)
+
 # Function to plot ZIP codes on map using Folium
 def plot_zip_codes(zip_codes):
     # Create a map centered on the US
     m = folium.Map(location=[37.0902, -95.7129], zoom_start=4)
 
-    # Add ZIP codes as markers
+    # Add ZIP codes as markers with random colors
     for zip_code in zip_codes:
         lat, lon = zip_code_coordinates.get(zip_code, (None, None))
         if lat is not None and lon is not None:
-            folium.Marker([lat, lon], icon=folium.Icon(icon='info-sign')).add_to(m)
+            color = random_color()
+            folium.Marker([lat, lon], icon=folium.Icon(color=color, icon='info-sign')).add_to(m)
 
     return m
 

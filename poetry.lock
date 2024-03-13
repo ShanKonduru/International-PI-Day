@@ -764,6 +764,20 @@ pyparsing = ">=2.3.1"
 python-dateutil = ">=2.7"
 
 [[package]]
+name = "mplleaflet"
+version = "0.0.5"
+description = "Convert Matplotlib plots into Leaflet web maps"
+optional = false
+python-versions = "*"
+files = [
+    {file = "mplleaflet-0.0.5.tar.gz", hash = "sha256:049e0b91797ce5b462853395138161fed9e8dfc1f4723f482ebb0739a0bbd289"},
+]
+
+[package.dependencies]
+jinja2 = "*"
+six = "*"
+
+[[package]]
 name = "numpy"
 version = "1.26.4"
 description = "Fundamental package for array computing in Python"
@@ -1193,4 +1207,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "fd51190aec6785412d9fa2ae1fef175ed106becf3d2ae4b8b08a096d1b985ab4"
+content-hash = "2cc1c6ad0cc864ac0251f33c6c5e7d21af46c909b17686669db52d5fb5db18e0"
